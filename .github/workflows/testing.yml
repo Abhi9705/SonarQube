@@ -19,7 +19,7 @@ jobs:
         with:
           args: >
               -Dsonar.organization=WWA
-              -Dsonar.projectKey= wwas
+              -Dsonar.projectKey=wwa_sonarqube
              #-Dsonar.python.coverage.reportPaths=coverage.xml
                 # Example step to work with scan results - placeholder for custom logic
 
