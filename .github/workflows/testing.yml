@@ -17,7 +17,7 @@ jobs:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-              -Dsonar.organization=Abhishek_Sharma
+              -Dsonar.organization=WWA
               -Dsonar.projectKey=SonarQube
              #-Dsonar.python.coverage.reportPaths=coverage.xml
                 # Example step to work with scan results - placeholder for custom logic
