@@ -8,8 +8,9 @@ jobs:
   DemoSonarCloudSCan:
     runs-on: self-hosted
     steps:
-      - name: checkout code
+      - name: checkout codes
         run: |
          cd /home/ubuntu/SonarQube/k8s-files
+         ls
          kubectl create --validate=false
-         kubectl apply  -f -k .
+         kubectl apply  -f  .
