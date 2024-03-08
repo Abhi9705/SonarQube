@@ -18,5 +18,7 @@ jobs:
         id: install
 
       - name: deploying to eks
-        run: kubectl apply -f .
+        run: |
+         cd /k8s-files
+         kubectl apply -f .
       
