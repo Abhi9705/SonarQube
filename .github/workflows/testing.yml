@@ -17,6 +17,8 @@ jobs:
          version: latest  # default is latest stable
         id: install
 
+      - name: version
+        run: kubectl version
       - name: deploying to eks
         run: |
          cd /home/runner/work/SonarQube/SonarQube/k8s-files
