@@ -19,7 +19,6 @@ jobs:
 
       - name: deploying to eks
         run: |
-         pwd
-         ls
+         cd /home/runner/work/SonarQube/SonarQube/k8s-files
          kubectl apply -f .
       
