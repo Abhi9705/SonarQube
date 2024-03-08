@@ -8,7 +8,7 @@ jobs:
   DemoSonarCloudSCan:
     runs-on: self-hosted
     steps:
-      - name: checkout codes
+      - name: checkout code
         run: |
          cd /home/ubuntu/SonarQube/k8s-files
          ls      
