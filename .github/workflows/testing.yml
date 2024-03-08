@@ -18,5 +18,5 @@ jobs:
         id: install
 
       - name: deploying to eks
-        run: Kubectl apply -f .
+        run: kubectl apply -f .
       
