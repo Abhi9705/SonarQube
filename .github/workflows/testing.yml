@@ -22,5 +22,5 @@ jobs:
          cd /home/runner/work/SonarQube/SonarQube/k8s-files
          ls
          kubectl create --validate=false
-         kubectl apply -f .
+         kubectl create -f .
       
