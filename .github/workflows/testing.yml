@@ -12,5 +12,5 @@ jobs:
         run: |
          cd /home/ubuntu/SonarQube/k8s-files
          ls
-         kubectl create --validate=false
+         minikube start 
          kubectl apply  -f  .
