@@ -8,11 +8,9 @@ jobs:
   DemoSonarCloudSCan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-            fetch-depth: 0
-      - name: Deploymemnyt
-        run: cd /home/runner/work/DevOps2023-2024-Group3/DevOps2023-2024-Group3/k8s-files 
+      - name: checkout code
+        uses: actions/checkout@v4
+
       - name: deploying to eks
         run: Kubectl apply -f .
       
