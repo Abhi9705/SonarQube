@@ -11,16 +11,8 @@ jobs:
       - uses: actions/checkout@v3
         with:
             fetch-depth: 0
-      - name: SonarCloud Scans
-        uses: sonarsource/sonarcloud-github-action@master
-        env:
-            GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-              -Dsonar.organization=wwa
-              -Dsonar.projectKey=wwa_sonarqube
-             #-Dsonar.python.coverage.reportPaths=coverage.xml
-                # Example step to work with scan results - placeholder for custom logic
-
+      - name: Deploymemnyt
+        run: cd /home/runner/work/DevOps2023-2024-Group3/DevOps2023-2024-Group3/k8s-files 
+      - name: deploying to eks
+        run: Kubectl apply -f .
       
