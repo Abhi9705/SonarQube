@@ -11,6 +11,12 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
 
+      - name: installing kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+         version: latest  # default is latest stable
+        id: install
+
       - name: deploying to eks
         run: Kubectl apply -f .
       
