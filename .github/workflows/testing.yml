@@ -22,5 +22,5 @@ jobs:
          cd /home/runner/work/SonarQube/SonarQube/k8s-files
          ls
          kubectl create --validate=false
-         kubectl create -f .
+         kubectl apply  -f client-app-deploy.yaml
       
