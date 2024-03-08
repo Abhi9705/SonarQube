@@ -6,21 +6,10 @@ on:
 
 jobs:
   DemoSonarCloudSCan:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: checkout code
-        uses: actions/checkout@v4
-
-      - name: installing kubectl
-        uses: azure/setup-kubectl@v3
-        with:
-         version: latest  # default is latest stable
-        id: install
-
-      - name: deploying to eks
         run: |
-         cd /home/runner/work/SonarQube/SonarQube/k8s-files
-         ls
+         cd /home/ubuntu/SonarQube/k8s-files
          kubectl create --validate=false
-         kubectl apply  -f client-app-deploy.yaml
-      
+         kubectl apply  -f .
