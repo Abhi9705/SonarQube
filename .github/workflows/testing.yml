@@ -17,14 +17,10 @@ jobs:
          version: latest  # default is latest stable
         id: install
 
-      - name: version
-        run: |
-         curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
-         chmod +x ./kubectl
-         sudo mv ./kubectl /usr/local/bin/kubectl
       - name: deploying to eks
         run: |
          cd /home/runner/work/SonarQube/SonarQube/k8s-files
+         ls
          kubectl create --validate=false
          kubectl apply -f .
       
