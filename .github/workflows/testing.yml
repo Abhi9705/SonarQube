@@ -26,8 +26,7 @@ jobs:
         run: |
          ls
          cd terraform/
-         ls
-         pwd
+         
       
       - name: Terraform Init
         id: init
@@ -39,10 +38,18 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan 
+        run: |
+         pwd
+         ls
+         cd terraform/
+         terraform plan 
         #continue-on-error: true
 
       - name: Terraform apply
-        run: terraform apply -auto-approve
+        run: |
+         pwd
+         ls
+         cd terraform/
+          terraform apply -auto-approve
         
         
