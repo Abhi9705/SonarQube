@@ -1,0 +1,16 @@
+name: "sonar_cloud_scan_github_actions"
+on: 
+  push:
+     branches:
+         - "main"
+
+jobs:
+  DemoSonarCloudSCan:
+    runs-on: self-hosted
+    steps:
+      - name: checkout codess
+        run: |
+         cd /home/ubuntu/SonarQube/k8s-files
+         ls
+         minikube start 
+         kubectl apply  -f  .
