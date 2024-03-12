@@ -3,7 +3,7 @@ name: frontend-master-workflow
 on: 
   push:
     branches:
-      - mai
+      - main
 jobs:
   Building_jobs:
     runs-on: ubuntu-latest
