@@ -45,8 +45,7 @@ resource "aws_default_security_group" "default-sg" {
     to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-  cidr_blocks = ["0.0.0.0/0"]
-  }
+  } 
   ingress {
     from_port   = 3000
     to_port     = 3000
@@ -74,4 +73,4 @@ resource "aws_default_security_group" "default-sg" {
   tags = {
     Name = "${var.env_prefix}-default-sg"
   }
-}
+}x`
