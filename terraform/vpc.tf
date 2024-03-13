@@ -73,4 +73,4 @@ resource "aws_default_security_group" "default-sg" {
   tags = {
     Name = "${var.env_prefix}-default-sg"
   }
-}x`
+}
