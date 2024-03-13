@@ -69,9 +69,9 @@ resource "aws_default_security_group" "default-sg" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    
+ }
   tags = {
     Name = "${var.env_prefix}-default-sg"
   }
-}
+
 }
